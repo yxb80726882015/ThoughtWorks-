@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InOrder;
 
@@ -10,11 +11,17 @@ import static org.mockito.Mockito.*;
  */
 public class GameProcessTest {
 
+    private GameProcess game;
+    private PrintStream out;
+
+    @Before
+    public void setUp(){
+        out = mock(PrintStream.class);
+        game = new GameProcess(out);
+    }
+
     @Test
     public void should_print_welcome_when_game_start(){
-        PrintStream out = mock(PrintStream.class);
-        GameProcess game = new GameProcess(out);
-
         verify(out,never()).println("Welcome!");
         game.start();
         verify(out).println("Welcome!");
