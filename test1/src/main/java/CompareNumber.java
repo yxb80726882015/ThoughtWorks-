@@ -3,7 +3,6 @@
  */
 public class CompareNumber {
 
-
     public String gitTips(String input, String answer) {
         int aCount = 0;
         int containCount= 0;
