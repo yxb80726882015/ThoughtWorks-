@@ -120,4 +120,6 @@ public class FightGameTest {
         inOrder.verify(out).println("战士李四用利剑攻击了普通人张三,战士李四发动了全力一击,普通人张三受到了33点伤害");
       //  inOrder.verify(out).println("普通人张三被打败");
     }
+
+
 }
